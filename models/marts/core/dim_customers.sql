@@ -1,9 +1,3 @@
-{{
-    config(
-        materialized='table'
-    )
-}}
-
 -- allows building dependencies between models
 with customers as (
     select * from {{ ref('stg_customers')}}
